@@ -81,7 +81,7 @@ Use **access token** as Bearer token.
 * `POST /app/entries/`
 * `GET /app/entries/?customer=2`
 * `GET /app/entries/?type=credit`
-* `GET /app/entries/?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD`
+* `GET /app/entries/?start_date=2026-01-01&end_date=2026-02-10`
 
 ### Customer Summary
 
