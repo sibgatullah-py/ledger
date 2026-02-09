@@ -97,15 +97,15 @@ Use **access token** as Bearer token.
 
 ### Customer Summary
 
-* `GET /app/customers/2/summary/`
+* `GET /app/customers/1/summary/`
 
 Response:
 
 ```json
 {
-  "total_credit": 500.0,
-  "total_debit": 0,
-  "balance": 500.0
+    "total_credit": 800.0,
+    "total_debit": 325.0,
+    "balance": 475.0
 }
 
 ```

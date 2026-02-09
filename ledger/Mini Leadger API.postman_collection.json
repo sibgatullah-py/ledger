@@ -90,7 +90,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjU5ODM5LCJpYXQiOjE3NzA2NTk1MzksImp0aSI6IjBhZTAyZjZjYzgwNzRmMmFiNWQzYzM0ODVmODAyYzM0IiwidXNlcl9pZCI6IjEifQ.zXK0gmnijmqmnQt1UdsSO2y9_B3AikyFgrcBltHABg0",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -99,7 +99,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n",
+          "raw": "{\n  \"name\": \"Customer\",\n  \"phone\": \"0123451111111\",\n  \"address\": \"Dhaka\"\n}\n",
           "options": {
             "raw": {
               "language": "json"
@@ -136,7 +136,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjU5ODM5LCJpYXQiOjE3NzA2NTk1MzksImp0aSI6IjBhZTAyZjZjYzgwNzRmMmFiNWQzYzM0ODVmODAyYzM0IiwidXNlcl9pZCI6IjEifQ.zXK0gmnijmqmnQt1UdsSO2y9_B3AikyFgrcBltHABg0",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -145,7 +145,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n"
+          "raw": "\n"
         },
         "url": {
           "raw": "http://127.0.0.1:8000/app/customers/",
@@ -174,7 +174,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYyNTQ3LCJpYXQiOjE3NzA2NjIyNDcsImp0aSI6ImZjNmM0NzAxZDU2ODRkZTc4NDI0NWNmMjNmZTE3YzM3IiwidXNlcl9pZCI6IjEifQ.AN7T6SaYchzh8sGwyDVIBsiDdssD99frfpCUUHSAfM4",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -183,7 +183,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": " {\n            \"id\": 4,\n            \"name\": \"Salim Updated\",\n            \"phone\": \"01708888888888888\",\n            \"address\": \"Barishal\"\n}",
+          "raw": " {\n            \"id\": 1,\n            \"name\": \"Customer Updated\",\n            \"phone\": \"01708888888888888\",\n            \"address\": \"Barishal\"\n}",
           "options": {
             "raw": {
               "language": "json"
@@ -191,7 +191,7 @@
           }
         },
         "url": {
-          "raw": "http://127.0.0.1:8000/app/customers/4/",
+          "raw": "http://127.0.0.1:8000/app/customers/1/",
           "protocol": "http",
           "host": [
             "127",
@@ -203,7 +203,7 @@
           "path": [
             "app",
             "customers",
-            "4",
+            "1",
             ""
           ]
         }
@@ -211,14 +211,14 @@
       "response": []
     },
     {
-      "name": "Delete user",
+      "name": "Delete Customer",
       "request": {
         "auth": {
           "type": "bearer",
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYyNTQ3LCJpYXQiOjE3NzA2NjIyNDcsImp0aSI6ImZjNmM0NzAxZDU2ODRkZTc4NDI0NWNmMjNmZTE3YzM3IiwidXNlcl9pZCI6IjEifQ.AN7T6SaYchzh8sGwyDVIBsiDdssD99frfpCUUHSAfM4",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY1ODQ0LCJpYXQiOjE3NzA2NjU1NDQsImp0aSI6IjIwNWQ0ZTQ3MmY4NjRhNmVhMWI5M2NlYzg0NTA1MzFiIiwidXNlcl9pZCI6IjEifQ.fzalXtF3ce4QbPUAycGXvHP5lGDvjy2ufi_rrkzsrlU",
               "type": "string"
             }
           ]
@@ -230,7 +230,7 @@
           "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n"
         },
         "url": {
-          "raw": "http://127.0.0.1:8000/app/customers/6/",
+          "raw": "http://127.0.0.1:8000/app/customers/1/",
           "protocol": "http",
           "host": [
             "127",
@@ -242,7 +242,7 @@
           "path": [
             "app",
             "customers",
-            "6",
+            "1",
             ""
           ]
         }
@@ -257,7 +257,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzNTM2LCJpYXQiOjE3NzA2NjMyMzYsImp0aSI6IjRiMDZiYzBkYTliMDQyNjI4MDliYjdlMTdjYzk4NzVhIiwidXNlcl9pZCI6IjEifQ.eGATzBL-039I2evRVCwYfy6iJ8ZSAEklN9eXzBvq97U",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -266,7 +266,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"customer\": 1,\n  \"type\": \"credit\",\n  \"amount\": 1200,\n  \"note\": \"Customer paid\",\n  \"entry_date\": \"2026-02-10\"\n}\n",
+          "raw": "{\n  \"customer\": 1,\n  \"type\": \"credit\",\n  \"amount\": 800,\n  \"note\": \"Customer paid\",\n  \"entry_date\": \"2026-02-10\"\n}\n",
           "options": {
             "raw": {
               "language": "json"
@@ -300,7 +300,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzNTM2LCJpYXQiOjE3NzA2NjMyMzYsImp0aSI6IjRiMDZiYzBkYTliMDQyNjI4MDliYjdlMTdjYzk4NzVhIiwidXNlcl9pZCI6IjEifQ.eGATzBL-039I2evRVCwYfy6iJ8ZSAEklN9eXzBvq97U",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -309,7 +309,7 @@
         "header": [],
         "body": {
           "mode": "raw",
-          "raw": "{\n  \"customer\": 1,\n  \"type\": \"debit\",\n  \"amount\": 200,\n  \"note\": \"Customer bought goods\",\n  \"entry_date\": \"2026-02-10\"\n}\n",
+          "raw": "{\n  \"customer\": 1,\n  \"type\": \"debit\",\n  \"amount\": 325,\n  \"note\": \"Customer bought goods\",\n  \"entry_date\": \"2026-02-11\"\n}\n",
           "options": {
             "raw": {
               "language": "json"
@@ -337,9 +337,44 @@
     },
     {
       "name": "Customer Ledger summery",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "\n"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/customers/1/summary/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "customers",
+            "1",
+            "summary",
+            ""
+          ]
+        }
       },
       "response": []
     },
@@ -351,7 +386,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzODcxLCJpYXQiOjE3NzA2NjM1NzEsImp0aSI6ImJiYzkxZGJkOGUzYzRjN2I5MTE5ZmU2YWJiZGI2NDExIiwidXNlcl9pZCI6IjEifQ._dCZpHFJJeYLtM0ojSczXkcp9cPEWFw-lHisrkwBf8s",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -391,7 +426,7 @@
           "bearer": [
             {
               "key": "token",
-              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzODcxLCJpYXQiOjE3NzA2NjM1NzEsImp0aSI6ImJiYzkxZGJkOGUzYzRjN2I5MTE5ZmU2YWJiZGI2NDExIiwidXNlcl9pZCI6IjEifQ._dCZpHFJJeYLtM0ojSczXkcp9cPEWFw-lHisrkwBf8s",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
               "type": "string"
             }
           ]
@@ -426,8 +461,44 @@
     {
       "name": "Filter by Date Range",
       "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjY2MDI2LCJpYXQiOjE3NzA2NjU3MjYsImp0aSI6Ijk4ODJjNDlkNzcwZTRjNTE4MThlZWVlMTQ5YWRlYjZmIiwidXNlcl9pZCI6IjEifQ.e15aucIX0TbafK0V4cjgH3TbBBjtXKCPnngHurGWaXo",
+              "type": "string"
+            }
+          ]
+        },
         "method": "GET",
-        "header": []
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/entries/?start_date=2026-01-01&end_date=2026-12-31",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "entries",
+            ""
+          ],
+          "query": [
+            {
+              "key": "start_date",
+              "value": "2026-01-01"
+            },
+            {
+              "key": "end_date",
+              "value": "2026-12-31"
+            }
+          ]
+        }
       },
       "response": []
     }
