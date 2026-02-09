@@ -1,8 +1,12 @@
 from rest_framework import generics, viewsets, permissions
+from rest_framework.decorators import action
+from rest_framework.response import Response
+
 from django.contrib.auth.models import User
-from .serializers import RegisterSerializer
+from django.db.models import Sum
 
 from .models import Customer, LedgerEntry
+
 from .serializers import *
 
 
@@ -20,6 +24,24 @@ class CustomerViewSet(viewsets.ModelViewSet):
 
     def perform_create(self, serializer):
         serializer.save(user=self.request.user)
+
+    @action(detail=True, methods=['get'])
+    def summary(self, request, pk=None):
+        customer = self.get_object()
+
+        entries = LedgerEntry.objects.filter(user=request.user, customer=customer)
+
+        total_credit = entries.filter(type='credit').aggregate(Sum('amount'))['amount__sum'] or 0
+        total_debit = entries.filter(type='debit').aggregate(Sum('amount'))['amount__sum'] or 0
+
+        balance = total_credit - total_debit
+
+        return Response({
+            "total_credit": total_credit,
+            "total_debit": total_debit,
+            "balance": balance
+        })
+
 
         
 class LedgerEntryViewSet(viewsets.ModelViewSet):
