@@ -35,7 +35,7 @@ A simple REST API built with **Django + Django REST Framework** to manage custom
 ## Setup Instructions
 
 ```bash
-git clone <repo-url>
+git clone https://github.com/sibgatullah-py/ledger.git
 cd ledger
 python -m venv venv
 source venv/bin/activate   # Windows: venv\Scripts\activate
@@ -79,7 +79,7 @@ Use **access token** as Bearer token.
 ### Ledger Entries
 
 * `POST /app/entries/`
-* `GET /app/entries/?customer=1`
+* `GET /app/entries/?customer=2`
 * `GET /app/entries/?type=credit`
 * `GET /app/entries/?start_date=YYYY-MM-DD&end_date=YYYY-MM-DD`
 
@@ -91,10 +91,11 @@ Response:
 
 ```json
 {
-  "total_credit": 800,
-  "total_debit": 200,
-  "balance": 600
+  "total_credit": 500.0,
+  "total_debit": 0,
+  "balance": 500.0
 }
+
 ```
 
 ---
