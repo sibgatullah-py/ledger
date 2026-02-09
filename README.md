@@ -85,7 +85,7 @@ Use **access token** as Bearer token.
 
 ### Customer Summary
 
-* `GET /app/customers/{id}/summary/`
+* `GET /app/customers/2/summary/`
 
 Response:
 
