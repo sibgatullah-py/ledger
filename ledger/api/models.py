@@ -2,6 +2,8 @@ from django.db import models
 from django.contrib.auth.models import User
 
 
+
+# Each customer belongs to a user (owner)
 class Customer(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     name = models.CharField(max_length=100)
@@ -12,6 +14,7 @@ class Customer(models.Model):
         return self.name
 
 
+# Ledger entry for a customer
 class LedgerEntry(models.Model):
     TYPE_CHOICES = (
         ('credit', 'Credit'),
@@ -20,7 +23,7 @@ class LedgerEntry(models.Model):
 
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     customer = models.ForeignKey(Customer, on_delete=models.CASCADE, related_name='entries')
-    type = models.CharField(max_length=10, choices=TYPE_CHOICES)
+    type = models.CharField(max_length=10, choices=TYPE_CHOICES)  # credit or debit
     amount = models.DecimalField(max_digits=10, decimal_places=2)
     note = models.TextField(blank=True, null=True)
     entry_date = models.DateField()

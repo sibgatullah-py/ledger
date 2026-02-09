@@ -32,6 +32,7 @@ A simple REST API built with **Django + Django REST Framework** to manage custom
 
 ---
 
+
 ## Setup Instructions
 
 ```bash
@@ -43,6 +44,17 @@ pip install -r requirements.txt
 python manage.py migrate
 python manage.py runserver
 ```
+
+---
+
+## Postman Collection
+
+To quickly test all API endpoints, import the provided Postman collection:
+
+- File: `ledger/Mini Leadger API.postman_collection.json`
+- How to use: Open Postman, click "Import", and select the file above. All endpoints and sample requests are included.
+
+---
 
 ---
 
@@ -100,8 +112,12 @@ Response:
 
 ---
 
-## Notes
 
-* Users can only access their own data.
-* Credit = money customer owes.
-* Debit = payment received.
+## Additional Notes
+
+- Users can only access their own data.
+- Credit = money customer owes.
+- Debit = payment received.
+- Pagination is enabled for list endpoints (default page size: 10).
+- Unit tests: Only a placeholder is included; full test coverage is not provided.
+- Docker setup: Not included in this version.

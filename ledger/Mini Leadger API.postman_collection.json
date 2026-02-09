@@ -1,0 +1,435 @@
+{
+  "info": {
+    "_postman_id": "90828913-3cac-48df-a689-5bc9e8407da4",
+    "name": "Mini Leadger API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "50239850"
+  },
+  "item": [
+    {
+      "name": "Auththentication",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"123456\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/register/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "register",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "JWT_Auth_Token",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjU5ODM5LCJpYXQiOjE3NzA2NTk1MzksImp0aSI6IjBhZTAyZjZjYzgwNzRmMmFiNWQzYzM0ODVmODAyYzM0IiwidXNlcl9pZCI6IjEifQ.zXK0gmnijmqmnQt1UdsSO2y9_B3AikyFgrcBltHABg0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"username\": \"testuser\",\n  \"password\": \"123456\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/api/token/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "api",
+            "token",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Customer Create",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjU5ODM5LCJpYXQiOjE3NzA2NTk1MzksImp0aSI6IjBhZTAyZjZjYzgwNzRmMmFiNWQzYzM0ODVmODAyYzM0IiwidXNlcl9pZCI6IjEifQ.zXK0gmnijmqmnQt1UdsSO2y9_B3AikyFgrcBltHABg0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/customers/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "customers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Customer List",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjU5ODM5LCJpYXQiOjE3NzA2NTk1MzksImp0aSI6IjBhZTAyZjZjYzgwNzRmMmFiNWQzYzM0ODVmODAyYzM0IiwidXNlcl9pZCI6IjEifQ.zXK0gmnijmqmnQt1UdsSO2y9_B3AikyFgrcBltHABg0",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/customers/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "customers",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Update Customer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYyNTQ3LCJpYXQiOjE3NzA2NjIyNDcsImp0aSI6ImZjNmM0NzAxZDU2ODRkZTc4NDI0NWNmMjNmZTE3YzM3IiwidXNlcl9pZCI6IjEifQ.AN7T6SaYchzh8sGwyDVIBsiDdssD99frfpCUUHSAfM4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": " {\n            \"id\": 4,\n            \"name\": \"Salim Updated\",\n            \"phone\": \"01708888888888888\",\n            \"address\": \"Barishal\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/customers/4/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "customers",
+            "4",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete user",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYyNTQ3LCJpYXQiOjE3NzA2NjIyNDcsImp0aSI6ImZjNmM0NzAxZDU2ODRkZTc4NDI0NWNmMjNmZTE3YzM3IiwidXNlcl9pZCI6IjEifQ.AN7T6SaYchzh8sGwyDVIBsiDdssD99frfpCUUHSAfM4",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Shofik\",\n  \"phone\": \"0174324233221\",\n  \"address\": \"Kumilla\"\n}\n"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/customers/6/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "customers",
+            "6",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ledger entry credit",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzNTM2LCJpYXQiOjE3NzA2NjMyMzYsImp0aSI6IjRiMDZiYzBkYTliMDQyNjI4MDliYjdlMTdjYzk4NzVhIiwidXNlcl9pZCI6IjEifQ.eGATzBL-039I2evRVCwYfy6iJ8ZSAEklN9eXzBvq97U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": 1,\n  \"type\": \"credit\",\n  \"amount\": 1200,\n  \"note\": \"Customer paid\",\n  \"entry_date\": \"2026-02-10\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/entries/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "entries",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Ledger entry debit",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzNTM2LCJpYXQiOjE3NzA2NjMyMzYsImp0aSI6IjRiMDZiYzBkYTliMDQyNjI4MDliYjdlMTdjYzk4NzVhIiwidXNlcl9pZCI6IjEifQ.eGATzBL-039I2evRVCwYfy6iJ8ZSAEklN9eXzBvq97U",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"customer\": 1,\n  \"type\": \"debit\",\n  \"amount\": 200,\n  \"note\": \"Customer bought goods\",\n  \"entry_date\": \"2026-02-10\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/entries/",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "entries",
+            ""
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Customer Ledger summery",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    },
+    {
+      "name": "filter by customer",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzODcxLCJpYXQiOjE3NzA2NjM1NzEsImp0aSI6ImJiYzkxZGJkOGUzYzRjN2I5MTE5ZmU2YWJiZGI2NDExIiwidXNlcl9pZCI6IjEifQ._dCZpHFJJeYLtM0ojSczXkcp9cPEWFw-lHisrkwBf8s",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/entries/?customer=1",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "entries",
+            ""
+          ],
+          "query": [
+            {
+              "key": "customer",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Type",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzcwNjYzODcxLCJpYXQiOjE3NzA2NjM1NzEsImp0aSI6ImJiYzkxZGJkOGUzYzRjN2I5MTE5ZmU2YWJiZGI2NDExIiwidXNlcl9pZCI6IjEifQ._dCZpHFJJeYLtM0ojSczXkcp9cPEWFw-lHisrkwBf8s",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:8000/app/entries/?type=credit",
+          "protocol": "http",
+          "host": [
+            "127",
+            "0",
+            "0",
+            "1"
+          ],
+          "port": "8000",
+          "path": [
+            "app",
+            "entries",
+            ""
+          ],
+          "query": [
+            {
+              "key": "type",
+              "value": "credit"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Filter by Date Range",
+      "request": {
+        "method": "GET",
+        "header": []
+      },
+      "response": []
+    }
+  ]
+}
