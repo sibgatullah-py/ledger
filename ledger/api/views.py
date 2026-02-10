@@ -13,7 +13,7 @@ from .serializers import *
 
 
 # User registration endpoint 
-class RegisterView(generics.CreateAPIView):
+class RegisterView(generics.CreateAPIView): # not a viewSet
     queryset = User.objects.all()
     serializer_class = RegisterSerializer
 

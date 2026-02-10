@@ -22,8 +22,9 @@ from rest_framework_simplejwt.views import TokenObtainPairView, TokenRefreshView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('app/', include('api.urls')),
+    path('app/', include('api.urls')), # app url binding 
     
-    path('api/token/', TokenObtainPairView.as_view()),
-    path('api/token/refresh/', TokenRefreshView.as_view()),
+    # This is a login token generator
+    path('api/token/', TokenObtainPairView.as_view()), # method of simple JWT 
+    path('api/token/refresh/', TokenRefreshView.as_view()), # method of simple JWT
 ]
