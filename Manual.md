@@ -65,3 +65,31 @@ Authorization: Bearer <token>
 [Customers / Entries APIs]
 
 ```
+
+* Endpoints:
+    * POST  /app/register/      | Registering New User
+    * POST  /api/token/         | Generating token for Login
+    * POST  /api/token/refresh/ | Refreshing token for stop continuous login
+
+* Why two different prefix?
+    * /app/ ---> Custom business APIs (customer, ledger)
+    * /api/ ---> Authentication/System APIs
+
+1. Login token generator:
+    User sends username + password 
+    ↓ 
+    Django verifies credentials
+    ↓
+    If correct returns:
+    {
+        "refresh":"long_token",
+        "access":"short_token",
+    }
+
+2. Refresh Token:
+    When access token expiers, User sends refresh token, Django takes that refresh token and gives a new access token.
+
+    Note: Refresh Token helps to avoid forcing user to login again and again.
+
+
+## Part-1 Authentication flow
