@@ -76,12 +76,13 @@ Authorization: Bearer <token>
     * /api/ ---> Authentication/System APIs
 
 * Login token generator:
+    ```bash
     User sends username + password 
     ↓ 
     Django verifies credentials
     ↓
     If correct returns:
-    ```bash
+    
     {
         "refresh":"long_token",
         "access":"short_token",
