@@ -155,3 +155,111 @@ router.register(r'customers', CustomerViewSet, basename='customers')
 This powerful path telling Django:
 "For Customers, use CustomerViewSet and automatically generate all CRUD URLs"
 So instead of writing different urls for each function in CRUD, the router does all the work(generating urls).
+
+* basename
+```bash
+basename='customers'
+```
+This is just an internal name DRF uses for reversing URLs, required when no queryset is defined directly.
+
+* The end points this router objects creates:
+```bash
+GET    /app/customers/              List
+POST   /app/customers/              Create
+GET    /app/customers/{id}/         Retrieve
+PUT    /app/customers/{id}/         Update
+PATCH  /app/customers/[id]/         Partial Update
+DELETE /app/customers/{id}/         Delete
+GET    /app/customers/{id}/summery/ Custom actions
+```
+
+* End points used in project 
+```bash
+POST  /app/customers/
+GET   /app/customers/
+PUT   /app/customers/{id}/
+DELETE /app/customers/{id}/
+```
+
+* Logic:
+    * Every customer newly created is automatically linked to the logged in user.
+    * One user cannot access other user's customers
+
+
+## Part-3 Ledger Entry Flow
+```bash
+User -> Ledger API -> LedgerEntry Table DB -> Linked Customers
+```
+
+* Diagram:
+```bash
+[User]
+   ↓
+[POST /entries]
+   ↓
+[LedgerEntry]
+   ├── type (credit/debit)
+   ├── amount
+   ├── date
+   ├── user_id
+   └── customer_id
+
+```
+
+* Relationships:
+```bash
+User 1 ───< Customer ───< LedgerEntry
+```
+    *Meaning:
+        * One user --> many customers
+        * One customers --> many ledger entries
+
+* Fields:
+    * type (credit/debit)
+    * amount
+    * note
+    * entry_date
+    * user_id
+    * customer_id
+
+* End Points:
+    ```bash
+    POST /app/entries/
+    GET  /app/entries/
+    ```
+
+* Filters:
+    * By Customers = ?customer=1
+    * By type      = ?type=credit
+    * By date      = ?start_date=yyyy_mmmm_dddd
+
+
+## Part-4 Customer Summery Logic
+Only calculation
+```bash
+[GET /customers/{id}/summary]
+   ↓
+[Filter entries by customer+user]
+   ↓
+[Aggregate Sum]
+   ↓
+[Return Total]
+```
+
+Diagram
+```bash
+[customer]
+   ↓
+[Fetch Ledger Entries]
+   ↓
+[Sum Credit/Sum Debit]
+   ↓
+[Balance = Credit - Debit]
+   ↓
+[JSON Response]
+```
+
+* End point
+```bash
+GET /app/customers/{id}/summery/
+```
